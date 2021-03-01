@@ -24,15 +24,19 @@
         <action
             android:id="@+id/Cat_to_Main_action"
             app:destination="@id/MainFragment" />
+        <action
+            android:id="@+id/Cat_to_Choose_action"
+            app:destination="@id/ChooseFragment">
+        </action>
     </fragment>
-    <fragment>
+    <fragment
         android:id="@+id/ChooseFragment"
         android:name="com.example.theworldofanimals.ChooseFragment"
         android:label="@string/choose_fragment_label"
         tools:layout="@layout/fragment_choose">
 
         <action
-            android:id="@+id/Main_to_Cat_action"
+            android:id="@+id/Choose_to_Cat_action"
             app:destination="@id/CategoriesFragment" />
     </fragment>
 </navigation>
