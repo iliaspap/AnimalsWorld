@@ -16,6 +16,7 @@ class animal_activity : AppCompatActivity(){
             R.drawable.lion,
             R.drawable.lion2
         //den douleuei me 3
+        //mia xara douleuei me 3
         )
         val adapter = ViewPagerAdapter(images)
         val viewer = findViewById<ViewPager2>(R.id.viewPager)
