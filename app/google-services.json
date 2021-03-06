@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1033808839534",
+    "firebase_url": "https://animalsworld1-98d4c-default-rtdb.firebaseio.com",
+    "project_id": "animalsworld1-98d4c",
+    "storage_bucket": "animalsworld1-98d4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033808839534:android:0954c4861f3764afbd777f",
+        "android_client_info": {
+          "package_name": "com.example.animalsworld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033808839534-94lpgsav8s95183ns6qeqks7cigi52gj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAfYNRHvkN93NBYUNs4xYLMhlLIF9kDq8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033808839534-94lpgsav8s95183ns6qeqks7cigi52gj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
