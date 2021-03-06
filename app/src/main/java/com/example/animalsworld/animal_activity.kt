@@ -5,12 +5,16 @@ import android.media.AudioAttributes
 import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.View
+import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
+import kotlinx.coroutines.delay
 import java.lang.Exception
 
 class animal_activity : AppCompatActivity(){
@@ -21,11 +25,14 @@ class animal_activity : AppCompatActivity(){
         val images = listOf(
             R.drawable.lion,
             R.drawable.lion2
-        //den douleuei me 3
         )
         val adapter = ViewPagerAdapter(images)
         val viewer = findViewById<ViewPager2>(R.id.viewPager)
         viewer.adapter = adapter
+        val but = findViewById<ImageView>(R.id.imageView11)
+        Handler().postDelayed({
+            but.visibility = View.GONE
+        }, 2000)
     }
     fun back(view:View){
         val intent = Intent(this,Choose::class.java)
