@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
-import com.example.animalsworld.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.item_view_pager.view.*
 
 class ViewPagerAdapter (val images: List<Int>) :RecyclerView.Adapter<ViewPagerAdapter.ViewPagerViewHolder>() {
