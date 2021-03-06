@@ -15,7 +15,7 @@ class Choose2 : AppCompatActivity() {
         startActivity(intent)
     }
     fun prev(view: View){
-        val intent = Intent(this,Choose2::class.java)
+        val intent = Intent(this,Choose::class.java)
         startActivity(intent)
     }
 }
