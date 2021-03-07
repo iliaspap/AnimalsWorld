@@ -1,5 +1,6 @@
 package com.example.animalsworld
 
+import android.content.Context
 import android.content.Intent
 import android.media.AudioAttributes
 import android.media.MediaPlayer
@@ -55,5 +56,12 @@ class animal_activity : AppCompatActivity(){
         }catch(e: Exception){
             Log.d("Fail", "Fail to play sound")
         }
+    }
+    fun play_info(view: View){
+        val Prefs = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        val editor = Prefs.edit()
+        editor.apply {
+            putBoolean("BOOLEAN_KEY", true)
+        }.apply()
     }
 }

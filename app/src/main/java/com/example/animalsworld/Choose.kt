@@ -1,5 +1,6 @@
 package com.example.animalsworld
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.GridLayout
@@ -19,7 +20,12 @@ class Choose : AppCompatActivity() {
             val intent = Intent(this, animal_activity::class.java)
             startActivity(intent)
         }
-
+        val Prefs = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        val savedBoolean = Prefs.getBoolean("BOOLEAN_KEY",false)
+        if(savedBoolean){
+            val star1 = findViewById<ImageView>(R.id.imageView7)
+            star1.setImageResource(android.R.drawable.btn_star_big_on)
+        }
     }
     fun back(view: View){
         val intent = Intent(this,Categories::class.java)
@@ -27,7 +33,6 @@ class Choose : AppCompatActivity() {
     }
 
     fun next(view: View){
-        Log.d("myApp", "mphke")
         val intent = Intent(this, Choose2::class.java)
         startActivity(intent)
     }
