@@ -1,5 +1,6 @@
 package com.example.animalsworld
 
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.media.AudioAttributes
@@ -7,6 +8,7 @@ import android.media.MediaPlayer
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.provider.MediaStore
 import android.util.Log
 import android.view.View
 import android.widget.ImageButton
@@ -19,6 +21,7 @@ import kotlinx.coroutines.delay
 import java.lang.Exception
 
 class animal_activity : AppCompatActivity(){
+    val   REQUEST_IMAGE_CAPTURE = 101
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.animal_activity)
@@ -64,4 +67,13 @@ class animal_activity : AppCompatActivity(){
             putBoolean("BOOLEAN_KEY", true)
         }.apply()
     }
+    fun cameraAR(view: View){
+        val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        try {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+        } catch (e: ActivityNotFoundException) {
+            e.printStackTrace()
+        }
+    }
+
 }

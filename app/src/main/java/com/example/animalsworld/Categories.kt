@@ -3,6 +3,7 @@ package com.example.animalsworld
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 
 class Categories : AppCompatActivity() {
@@ -14,5 +15,9 @@ class Categories : AppCompatActivity() {
             val intent = Intent(this, Choose::class.java).apply{}
             startActivity(intent)
         }
+    }
+    fun goinitial(view: View){
+        val intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
     }
 }
